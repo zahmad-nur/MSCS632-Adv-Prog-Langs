@@ -1,0 +1,20 @@
+OpenJDK 64-Bit Server VM warning: Option FlightRecorder was deprecated in version 13.0 and will likely be removed in a future release.
+[0.003s][info][gc] Using Serial
+[0.714s][info][gc] GC(0) Pause Young (Allocation Failure) 18M->3M(61M) 20.564ms
+[0.860s][info][jfr,startup] Started recording 1. No limit specified, using maxsize=250MB as default.
+[0.860s][info][jfr,startup] 
+[0.860s][info][jfr,startup] Use jcmd 126 JFR.dump name=1 to copy recording data to file.
+Before: used = 9289176 bytes
+After round 0: used = 17963912 bytes (retained size=20000)
+[1.151s][info][gc         ] GC(1) Pause Young (Allocation Failure) 20M->16M(61M) 53.061ms
+After round 1: used = 21944968 bytes (retained size=40000)
+After round 2: used = 30572328 bytes (retained size=60000)
+[1.613s][info][gc         ] GC(2) Pause Young (Allocation Failure) 33M->33M(61M) 57.168ms
+After round 3: used = 39258072 bytes (retained size=80000)
+After round 4: used = 47571744 bytes (retained size=100000)
+Requesting GC (hint only)...
+[2.089s][info][gc         ] GC(3) Pause Full (System.gc()) 45M->44M(103M) 68.976ms
+After System.gc(): used = 47544680 bytes
+Note: memory did NOT drop back down -- 'retained' is still reachable,
+so the GC correctly refuses to collect it. This is the Java equivalent
+of a leak: not a bug in the GC, but objects the programmer forgot to release.
